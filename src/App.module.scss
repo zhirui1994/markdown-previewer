@@ -1,0 +1,18 @@
+.App {
+    height: 100%;
+    width: 100%;
+
+    .main {
+        height: calc(100% - 60px);
+        width: 100%;
+        :global(#editor), :global(#preview){
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+}
