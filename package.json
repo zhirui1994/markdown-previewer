@@ -7,6 +7,7 @@
   "homepage": "https://zhirui1994.github.io/markdown-previewer/",
   "license": "MIT",
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "marked": "^0.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"

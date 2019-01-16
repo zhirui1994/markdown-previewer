@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import marked from 'marked';
 import styles from './App.module.scss';
 import editorDefault from './test.md';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github-gist.css';
+
+marked.setOptions({
+    highlight: (code) => {
+        return hljs.highlightAuto(code).value;
+    }
+})
 
 class App extends Component {
     handleInput = (e) => {
