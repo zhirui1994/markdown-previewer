@@ -26,7 +26,7 @@ class App extends Component {
         <div className={styles.App}>
             <header className={styles.header}>头部占位内容</header>
             <main className={styles.main}>
-                <textarea ref={textarea => this.editor = textarea} defaultValue={editorDefault} onInput={this.handleInput} id="editor"></textarea>
+                <textarea spellCheck="false" ref={textarea => this.editor = textarea} defaultValue={editorDefault} onInput={this.handleInput} id="editor"></textarea>
                 <section ref={section => this.preview = section} id="preview"></section>
             </main>
             <footer>脚部占位内容</footer>
