@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import marked from 'marked';
-import styles from './App.module.scss';
-import editorDefault from './test.md';
+import styles from './style.module.scss';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-gist.css';
 
@@ -16,22 +15,24 @@ class MarkdownPreviewer extends Component {
         const { onChange } = this.props;
         const value = this.editor.value;
         e.preventDefault();
-        onChange(value);
+        typeof onChange === 'function' && onChange(value);
         this.preview.innerHTML = marked(value);
     }
 
     componentDidMount() {
-        this.preview.innerHTML = marked(editorDefault);
+        const { defaultValue } = this.props;
+        this.preview.innerHTML = marked(defaultValue);
     }
 
     render() {
+        const { defaultValue } = this.props;
         return (
             <div className={styles.markdownPreviewer}>
                 <textarea
                     id="editor"
                     spellCheck="false"
                     ref={textarea => this.editor = textarea}
-                    defaultValue={editorDefault}
+                    defaultValue={defaultValue}
                     onInput={this.handleInput}
                 ></textarea>
                 <section
