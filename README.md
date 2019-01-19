@@ -17,7 +17,6 @@ You can build your project by forking <a href='http://codepen.io/freeCodeCamp/pe
 Once you're done, submit the URL to your working project with all its tests passing.
 Remember to use the <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> method if you get stuck.
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
